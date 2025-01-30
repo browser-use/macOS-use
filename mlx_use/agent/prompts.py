@@ -48,6 +48,7 @@ class SystemPrompt:
 
 6. TASK COMPLETION:
 - Use the 'done' action when task is complete
+- Don't hallucinate actions
 - Include all task results in the 'done' action text
 - If stuck after 3 attempts, use 'done' with error details
 """
