@@ -12,7 +12,7 @@
 
 <div align="center">
   <h2>Tell your MacBook what to do, and it's done—across ANY app.</h2>
-  Created by <a href="https://x.com/OfirOzeri">Ofir Ozeri </a>♥️ migrated in collaboration with <a href="https://x.com/mamagnus00">Magnus</a> and <a href="https://x.com/gregpr07">Gregor</a><br> 
+  Created by <a href="https://x.com/OfirOzeri">Ofir Ozeri </a>♥️ migrated in collaboration with <a href="https://x.com/mamagnus00">Magnus</a> and <a href="https://x.com/gregpr07">Gregor</a><br>
 </div>
 <br>
 
@@ -37,7 +37,7 @@ Clone first
 git clone https://github.com/browser-use/macOS-use.git && cd macOS-use
 ```
 
-Don't forget API key <br>Supported providers: [OAI](https://platform.openai.com/docs/quickstart), [Anthropic](https://docs.anthropic.com/en/api/admin-api/apikeys/get-api-key) or [Gemini](https://ai.google.dev/gemini-api/docs/api-key) (deepseek R1 coming soon!)
+Don't forget API key <br>Supported providers: [OAI](https://platform.openai.com/docs/quickstart), [Anthropic](https://docs.anthropic.com/en/api/admin-api/apikeys/get-api-key), [Gemini](https://ai.google.dev/gemini-api/docs/api-key) or [Tongyi Qwen](https://www.alibabacloud.com/en/product/modelstudio) (deepseek R1 coming soon!)
 
 <br> At the moment, macOS-use works best with OAI or Anthropic API, tho Gemini is free. it works great two, just not as reliably. <br>
 

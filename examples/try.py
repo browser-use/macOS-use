@@ -18,7 +18,7 @@ from mlx_use.controller.service import Controller
 def set_llm(llm_provider:str = None):
 	if not llm_provider:
 		raise ValueError("No llm provider was set")
-	
+
 	if llm_provider == "OAI":
 		try:
 			api_key = os.getenv('OPENAI_API_KEY')
@@ -26,7 +26,7 @@ def set_llm(llm_provider:str = None):
 			print(f"Error while getting API key: {e}")
 			api_key = None
 		return ChatOpenAI(model='gpt-4o', api_key=SecretStr(api_key))
-	
+
 	if llm_provider == "google":
 		try:
 			api_key = os.getenv('GEMINI_API_KEY')
@@ -34,10 +34,17 @@ def set_llm(llm_provider:str = None):
 			print(f"Error while getting API key: {e}")
 			api_key = None
 		return ChatGoogleGenerativeAI(model='gemini-2.0-flash-exp',  api_key=SecretStr(api_key))
-	
+	if llm_provider == 'qwen':
+   try:
+			api_key = os.getenv('TONGYI_API_KEY')
+		except Exception as e:
+			print(f"Error while getting API key: {e}")
+			api_key = None
+		return ChatOpenAI(base_url='https://dashscope-intl.aliyuncs.com/compatible-mode/v1', model='qwen-plus', api_key=SecretStr(api_key))
+
 llm = set_llm('google')
 llm = set_llm('OAI')
-
+# llm = set_llm('qwen')
 
 controller = Controller()
 task = input("Hi there! What can I do for you today? ")
